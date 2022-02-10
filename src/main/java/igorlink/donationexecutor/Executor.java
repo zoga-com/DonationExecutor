@@ -2,6 +2,7 @@ package igorlink.donationexecutor;
 
 import igorlink.donationexecutor.executionsstaff.ExecUtils;
 import igorlink.service.MainConfig;
+import igorlink.service.Utils;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Sound;
@@ -52,6 +53,7 @@ public class Executor {
         } else {
             validDonationUsername = "Донатер";
             assert streamerPlayer != null;
+            Utils.logToConsole("§eникнейм донатера §f" + donationUsername + "§e был скрыт, как подозрительный");
             streamerPlayer.sendActionBar("НИКНЕЙМ ДОНАТЕРА БЫЛ СКРЫТ");
         }
 
